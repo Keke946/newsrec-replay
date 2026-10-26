@@ -1,0 +1,21 @@
+{
+  "status": "succeeded",
+  "prefix_batches": 22158,
+  "snapshot": {
+    "bytes": 6287421,
+    "prefix_count": 22158,
+    "prefix_sha256": "b6431963278c86f049aad2c168d2139a62e55fbd46f62a95e926da530bbb0db5",
+    "snapshot_sha256": "bcc6c73a9918a0128a1f4e6688ffd0c4fc027a0c359271428a70dace7c671c5d"
+  },
+  "checkpoint_seconds": 5.791202233000149,
+  "full_constructor_seconds": 30.5778918660003,
+  "snapshot_constructor_seconds": 8.752710896999815,
+  "second_snapshot_constructor_seconds": 8.970190474999981,
+  "all_mutable_state_exact": true,
+  "next_requests_exact": 103,
+  "next_source_events": 103,
+  "next_batches": 103,
+  "old_retry_does_not_rewind": true,
+  "source_db_and_original_journal_unchanged": true,
+  "scope": "one paired real-prefix timing observation, not production latency or repeated benchmark; logs retained, no compaction"
+}

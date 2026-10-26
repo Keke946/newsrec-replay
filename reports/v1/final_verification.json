@@ -1,0 +1,17 @@
+{
+  "source_cohort_complete": true,
+  "requests": 114477,
+  "fold_counts": {
+    "1": 114477
+  },
+  "all_request_fields_and_history_verified": true,
+  "label_arrival_and_model_identity_verified": true,
+  "initial_shared_model_top10_requests": 10949,
+  "source_database_unchanged": true,
+  "evidence_sha256": {
+    "train.f32": "2162f2616e2efc3884156abee490c7dd58cbb42d68b90bcf81f5f0cb06f7dce4",
+    "labels.i8": "dc4e4235713b4b249de5c97f6ed18121d5eca6c7c77dcf31a4ef8d20456b5180",
+    "groups.json": "2fba8e89005facaa1aff03a86b73646a9165144c2d3195f6b42dbb4aaef3fa66",
+    "predictions.jsonl": "860160f5c18e7f9a32b622c945a3581fdd35c9f0cec42e44e7eba42ddd3e7704"
+  }
+}
