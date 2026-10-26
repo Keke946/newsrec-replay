@@ -1,0 +1,33 @@
+{
+  "protocol_id": "mixed-negative-source-development-v1",
+  "train_end_ms": 1507647588945,
+  "validation_end_ms": 1507757054762,
+  "old_validation_start_ms": 1507757054762,
+  "old_validation_end_ms": 1507980021008,
+  "split_rule": "timestamp of floor(0.8*778836)-th train event within original training region, no labels used to choose split",
+  "models": [
+    "inbatch",
+    "mixed"
+  ],
+  "content_features": [
+    "cosine_last",
+    "cosine_max_last3",
+    "cosine_decay_mean_last3"
+  ],
+  "history": 3,
+  "decay": 0.7,
+  "search": "one fixed comparison; no hyperparameter sweep",
+  "final_region_scored": false,
+  "old_validation_scored": false,
+  "warning": "internal development window; original baseline design had already seen this training data; not a pristine independent test",
+  "vector_sha256": "5c7c36719ffad1650809f0cc974f187e1566473de347354df409b2eeed65bfcb",
+  "ids_sha256": "d12f60028a36706b9df4fed4bf609966427d56407c6f3cb543f84e04566058bd",
+  "negative_intervention": "per request replace floor(m/2) of m legal in-batch negative columns with uniformly sampled available catalog items excluding own positive; preserve exact m",
+  "sampling_correction": "none; source intervention, not unbiased MNS replication",
+  "auxiliary_seed": 2027,
+  "epochs": 1,
+  "batch_size": 256,
+  "temperature": 0.1,
+  "gate": "if internal HR@5 does not exceed matched inbatch control, stop; no slot sweep or original validation evaluation in this run",
+  "comparison_warning": "actual negative count and optimizer budget matched; candidate encoding work/FLOPs differ"
+}

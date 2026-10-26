@@ -1,0 +1,25 @@
+{
+  "protocol": "v1-single-final-event-time-evaluation",
+  "mode": "final_evaluation",
+  "selected_policy": "six-hour refit; selected before final scoring, fixed comparator only",
+  "final_end_rule": "natural max train-role timestamp",
+  "folds": [
+    {
+      "fold": 1,
+      "fit_end_ms": 1507980021008,
+      "target_end_ms": 1510603454886,
+      "request_after_ms": 1507980021008
+    }
+  ],
+  "source_events": 1112623,
+  "original_train_end_ms": 1507757054762,
+  "original_validation_end_ms": 1507980021008,
+  "refresh_ms": 21600000,
+  "activation_delay_ms": 60000,
+  "label_available_rule": "target event timestamp <=schedule-1, initial <=fit_end; actual ingestion time unknown",
+  "query_clock": "every source click proxy before label eligibility",
+  "denominator": "all next strictly-later targets within final end, including unavailable and unretrieved",
+  "testA_B_used": false,
+  "no_final_retuning": true,
+  "no_new_labels_job": "run schedule; if exact informative training-group set unchanged, reuse identical deterministic model, record origin, no cadence changes"
+}

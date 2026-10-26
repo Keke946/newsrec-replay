@@ -1,0 +1,39 @@
+{
+  "protocol": "training-only-expanding-origin-backtest-v1",
+  "source_events": 778836,
+  "old_validation_start_ms": 1507757054762,
+  "final_region_scored": false,
+  "training_executed": false,
+  "folds": [
+    {
+      "fold": 1,
+      "fit_end_ms": 1507318743152,
+      "target_end_ms": 1507549298481,
+      "request_after_ms": 1507318743152,
+      "requests_must_end_before_or_at": 1507549298481
+    },
+    {
+      "fold": 2,
+      "fit_end_ms": 1507549298481,
+      "target_end_ms": 1507647588945,
+      "request_after_ms": 1507549298481,
+      "requests_must_end_before_or_at": 1507647588945
+    },
+    {
+      "fold": 3,
+      "fit_end_ms": 1507647588945,
+      "target_end_ms": 1507757054762,
+      "request_after_ms": 1507647588945,
+      "requests_must_end_before_or_at": 1507757054762
+    }
+  ],
+  "rules": [
+    "no boundary chosen from performance",
+    "all targets including unavailable retained",
+    "fit labels only when target_timestamp<=fit_end",
+    "own-current-click then reveal other tied events after requests",
+    "provided embeddings provenance remains unknown",
+    "these training regions were already explored; not independent final evaluation"
+  ],
+  "next_comparison": "freeze original base15 versus fixed six-hour scheduled refits before execution; no content/slot rescue of failed fusion"
+}

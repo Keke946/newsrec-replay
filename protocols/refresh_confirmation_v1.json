@@ -1,0 +1,26 @@
+{
+  "protocol": "refresh-fixed-validation-confirmation-v1",
+  "source_events": "verified at runtime",
+  "old_validation_start_ms": 1507757054762,
+  "final_region_scored": false,
+  "training_executed": false,
+  "folds": [
+    {
+      "fold": 1,
+      "fit_end_ms": 1507757054762,
+      "target_end_ms": 1507980021008,
+      "request_after_ms": 1507757054762
+    }
+  ],
+  "rules": [
+    "no boundary chosen from performance",
+    "all targets including unavailable retained",
+    "fit labels only when target_timestamp<=fit_end",
+    "own-current-click then reveal other tied events after requests",
+    "provided embeddings provenance remains unknown",
+    "these training regions were already explored; not independent final evaluation"
+  ],
+  "next_comparison": "freeze original base15 versus fixed six-hour scheduled refits before execution; no content/slot rescue of failed fusion",
+  "mode": "validation_confirmation",
+  "warning": "previously explored original validation, not independent final test"
+}

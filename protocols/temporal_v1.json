@@ -1,0 +1,22 @@
+{
+  "protocol_id": "temporal-next-click-v1",
+  "status": "validation windows fixed; final evaluation not executed",
+  "dataset": "complete train role; testA and testB excluded",
+  "train_csv_sha256": "575e1fb0309f23cadc5e34d455d5f9f5f07a934e64eb07eb334c6c880505a109",
+  "articles_csv_sha256": "7291aa0e6e0d00eaaeae4d26349e9e97615878d13a192477b87c4c7a91d43ca0",
+  "train_end_ms": 1507757054762,
+  "validation_end_ms": 1507980021008,
+  "final_region": "strictly after validation_end, never used for method/parameter selection",
+  "request_definition": "immediately after an observed click, next strictly-later event as target",
+  "candidate_availability": "provided created_at_ts <= request time; not recovered real catalog ingestion time",
+  "repeat_policy": "earlier clicked articles remain eligible",
+  "tie_policy": "exclude next-event transitions with equal timestamps and report count",
+  "denominator": "all eligible proxy requests, including empty lists and unavailable targets",
+  "global_state_variants": {
+    "frozen": "fit item-pair/popularity statistics only before train_end; replay user histories",
+    "live_trend": "same request cohort; rolling 6h observed-event counts, refresh ranking every 5min; reveal timestamp batch after requests"
+  },
+  "metrics": ["request-averaged HR/MRR/NDCG@5,10", "user-balanced overall", "history length and zero-behavior diagnostics"],
+  "comparison_warning": "frozen and live-trend state differ explicitly; any gap is not attributable only to model architecture",
+  "limitations": ["no impressions or actual request timestamps", "provided embedding training/availability provenance unknown", "creation timestamps have audited anomalies", "no online A/B claims"]
+}

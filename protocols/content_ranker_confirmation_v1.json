@@ -1,0 +1,26 @@
+{
+  "protocol_id": "content-ranker-validation-confirmation-v1",
+  "train_end_ms": 1507757054762,
+  "validation_end_ms": 1507980021008,
+  "old_validation_start_ms": 1507757054762,
+  "old_validation_end_ms": 1507980021008,
+  "split_rule": "exact existing temporal_v1 window, locked three content features after internal development; no new sweep",
+  "models": [
+    "base15",
+    "content18"
+  ],
+  "content_features": [
+    "cosine_last",
+    "cosine_max_last3",
+    "cosine_decay_mean_last3"
+  ],
+  "history": 3,
+  "decay": 0.7,
+  "search": "one fixed comparison; no hyperparameter sweep",
+  "final_region_scored": false,
+  "old_validation_scored": true,
+  "warning": "previously explored validation window; fixed-feature confirmation, not independent final evaluation",
+  "vector_sha256": "5c7c36719ffad1650809f0cc974f187e1566473de347354df409b2eeed65bfcb",
+  "ids_sha256": "d12f60028a36706b9df4fed4bf609966427d56407c6f3cb543f84e04566058bd",
+  "mode": "validation_confirmation"
+}
