@@ -1,6 +1,6 @@
 {
   "format": "newsrec-public-source-v1",
-  "source_revision": "d6c0c02b89e26403a3bacee00f9fa3628f1b44b9",
+  "source_revision": "fbc990528ccb5ac00909b0a4ea5b4970403208c0",
   "files": {
     ".github/workflows/v1.yml": "432c63f0af6e79e016aa4a33d02a568aa708a1b4cb78ded482bb6ea3041b69a4",
     ".gitignore": "11dfe2e8a590d134662a03fb300e3415d396ec2ca17f4370ae9354a56f7be70f",
@@ -33,7 +33,7 @@
     "requirements-analysis.txt": "9428ccac2429c1d6e72d03a43281ec6ec7187eea6b328ec92068de48ee2c6c92",
     "requirements-ann.txt": "b45935c019c2f92f2647424902c27859881bc06783d1263f90d07f4744ec00a4",
     "requirements-ml.txt": "beba2c4dd74a69d3c06a20657d12081e8609d46ecc0c444381b26f4ffe384147",
-    "requirements-rank.txt": "568f9a805eed974d9b2e763734d1886c83b9346a57b2549f0f158c1eac1e980e",
+    "requirements-rank.txt": "b72a313541337f42c580512dbba4bee302c4660a4fea4c10d16cd78bf1357260",
     "requirements-service.txt": "5255cc0d01cf0b7c0128d932fd5fd8bd49cd6daedb2f5a4f75d2e889eacafa84",
     "run.py": "1ef5a32cf50826fe3eac814d3d7b4d6aedea4abbc2ed2b01290367d16f0f32a1",
     "src/newsrec/__init__.py": "527813ac44e6b9e83742af6b847dd43c6207900c62cc96b58041b0d68708a889",
@@ -120,5 +120,8 @@
     "tools/verify_time_ranker.py": "3e7deb9854402b7f91c6b2e49119646535036c1e92352480eb725e1d68dd2e6d",
     "tools/verify_v1_snapshot.py": "f865662b563f8e292be3f9628fedac22a6a807b29e1d1a8009ba1cf6821a9668"
   },
-  "scope": "initial public source snapshot; not a claim of prior public uploads"
+  "scope": "initial public source snapshot; not a claim of prior public uploads",
+  "publication_changes": [
+    "Declare scikit-learn 1.8.0 required by LightGBM ranking; first clean CI exposed missing preinstalled dependency."
+  ]
 }

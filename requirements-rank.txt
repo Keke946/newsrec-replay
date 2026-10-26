@@ -1,2 +1,4 @@
 numpy==2.3.5
 lightgbm==4.6.0
+# Required by the LGBMRanker scikit-learn interface.
+scikit-learn==1.8.0
