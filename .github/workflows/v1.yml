@@ -1,0 +1,19 @@
+name: v1-core
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  acceptance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: |
+            requirements-rank.txt
+            requirements-service.txt
+      - run: python -m pip install -r requirements-service.txt
+      - run: python tools/check_v1.py --report acceptance.json
+      - run: python tools/demo_v1.py --output demo-output
