@@ -1,0 +1,12 @@
+# Limitations and rejected directions
+
+- Data has click events, not real recommendation request/impression logs. Negatives are not exposure-backed CTR labels. Feedback availability is simulated from next-click event time; actual ingestion/arrival time is missing. The1min model-switch delay is an assumed budget.
+- Metadata timestamps have audited anomalies. Unavailable targets remain in evaluation denominators. No silent timezone correction or difficult-request deletion was used.
+- Development and original validation were explored repeatedly. The separately frozen final timeline is reported once; refitting within it uses only previously revealed labels, so compare the declared policies rather than claiming a frozen-model holdout or online A/B gain.
+- Learned retrieval, mixed-negative source changes, GRU sequence encoding and cold-candidate/content fusion did not establish gains over the strong selected baseline. Cold-start improvement is not claimed. ANN benchmarks measure snapshot neighbor fidelity and retrieval speed, not end-to-end click quality.
+- Supplied embeddings used in research have unknown training/availability provenance. They are not used in the selected v1 policy. Semantic ID was investigated, not implemented.
+- The dynamic SQLite WAL and rollback-journal trials each failed a real-prefix integrity/recovery test despite unit tests passing. Their failure cause remains unconfirmed; they are not the accepted backend. Simple22000-transaction probes passed in two locations, which did not diagnose the failure.
+- The accepted append journal was checked on a fixed seven-hour prefix crossing one refresh switch and two restarts. Process-abrupt-exit behavior is additionally checked with a synthetic child. This is not a full production durability, hardware power-loss or distributed exactly-once guarantee.
+- Snapshot recovery retains the complete log and retry index. It saves warmup/inference replay, not all log I/O or memory. A single paired restore measurement is not an SLA. Complete-record corruption is rejected; an unterminated unacknowledged tail is preserved separately then trimmed under this write protocol.
+- The API is an explicit complete-batch proxy replay interface, loopback/single-worker. Registry weights are precomputed. Live feedback training, multi-worker state coordination and HTTP load testing are outside the release.
+- Public source excludes competition data, weights, purchased material and per-request evidence. Licensing/redistribution limits still apply; see DATA_AND_LICENSE.md.
