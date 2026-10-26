@@ -1,0 +1,3 @@
+# Install the CPU build from the official PyTorch index (see README).
+numpy==2.3.5
+torch==2.7.1+cpu

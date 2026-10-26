@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "newsrec-temporal"
+version = "1.0.0"
+description = "Auditable temporal news recommendation experiments"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+newsrec = "newsrec.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

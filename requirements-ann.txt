@@ -1,0 +1,3 @@
+numpy==2.3.5
+faiss-cpu==1.12.0
+# Encoder: torch==2.7.1+cpu from https://download.pytorch.org/whl/cpu
