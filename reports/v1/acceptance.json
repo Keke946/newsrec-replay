@@ -1,0 +1,27 @@
+{
+  "scope": "v1 release acceptance, not all research branches",
+  "modules": [
+    "alignment",
+    "bootstrap",
+    "catalog",
+    "contracts",
+    "transfer",
+    "trend",
+    "time_ranker",
+    "serving",
+    "journal",
+    "refresh_replay",
+    "append_refresh_journal",
+    "state_snapshot",
+    "training_backtest",
+    "refresh_backtest",
+    "temporal_targets",
+    "fusion"
+  ],
+  "tests": 102,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "excluded": "optional neural/ANN research and rejected dynamic SQLite backend; see historical evidence"
+}
